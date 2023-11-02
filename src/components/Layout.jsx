@@ -2,7 +2,8 @@ import {Outlet, useLocation} from "react-router-dom"
 import {Header} from "./Header"
 import {Footer} from "./Footer"
 import {Leadership} from './Leadeship'
-import { useState, useEffect } from "react";
+import {Tabs} from './Tabs'
+import {corporationTabData, privateClientsTabData } from '../data/tabsData'
 
 const Layout = () => {
     const locaton = useLocation();
@@ -12,14 +13,18 @@ const Layout = () => {
     let backgroundImageClass = 'mainWrapper'
     let triangleClass = 'triangleWrapper'
 
-    if (currentPath === "/leadership") componentToRender = <Leadership/>
+    if (currentPath === "/leadership") {
+        componentToRender = <Leadership/>
+    }
     else if (currentPath === "/clients") {
         backgroundImageClass += ' privateClientsPage'
-        triangleClass = ''
+        triangleClass = 'hideTriangleWrapper'
+        componentToRender = <Tabs data={privateClientsTabData}/>
     }
     else if(currentPath === "/corporations") {
         backgroundImageClass += ' corporationsPage'
-        triangleClass = ''
+        triangleClass = 'hideTriangleWrapper'
+        componentToRender = <Tabs data={corporationTabData}/>
     }
 
 

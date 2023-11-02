@@ -1,3 +1,6 @@
+import PrivacyPolicy from '../docs/PrivacyPolicy.pdf';
+import TermsOfUse from '../docs/TermsOfUse.pdf'
+
 const Footer = () => {
     return(
         <footer className="footer">
@@ -8,8 +11,8 @@ const Footer = () => {
             <div className="footer__bottom">
                 <div>Pro Legal Group Corporation. All Rights Reserved.</div>
                 <div className="footer__docs">
-                    <a href="/">Privacy Policy</a>
-                    <a href="/">Terms of Use</a>
+                    <a href={PrivacyPolicy} rel='noreferrer' target='_blank'>Privacy Policy</a>
+                    <a href={TermsOfUse} rel='noreferrer' target='_blank'>Terms of Use</a>
                 </div>
             </div>
         </footer>
