@@ -11,11 +11,11 @@ const Header = () => {
                         </Link>
                     </li>
                     <li className="marginLeft90"><Link to="/about">About Us</Link></li>
-                    <li><Link to="/mission">Our mission & Vision</Link></li>
+                    <li><Link to="/mission">Our Mission & Vision</Link></li>
                     <li><Link to="/leadership">Leadership</Link></li>
                 </div>
                 <div>
-                    <li><Link to="/clients">Private clients & Family Offices</Link></li>
+                    <li><Link to="/clients">Private Clients & Family Offices</Link></li>
                     <li><Link to="/corporations">Corporations</Link></li>
                 </div>
             </ul>
