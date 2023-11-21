@@ -297,7 +297,7 @@ header ul a:hover {
 
 .tabs__ul li {
   margin-bottom: 25px;
-  line-height: 20px;
+  line-height: 25px;
 }
 
 .tabs__ul li::before {
@@ -305,7 +305,7 @@ header ul a:hover {
   color: #897b6f;
   font-weight: bold;
   display: inline-block;
-  width: 1.5em;
+  width: 1em;
   margin-left: -1em;
 }
 .burger-menu {
@@ -492,6 +492,11 @@ header ul a:hover {
 }
 
 @media screen and (max-width: 780px) {
+  .logo {
+    width: 122px;
+    height: 25px;
+    background-size: cover;
+  }
   .page {
     margin-top: 25%;
     padding-bottom: 100px;
