@@ -125,13 +125,13 @@ header ul a:hover {
 }
 
 .page h1 {
-  font-size: 50px;
+  font-size: 42px;
   color: #fff;
   font-weight: 100;
 }
 
 .page p {
-  font-size: 20px;
+  font-size: 26px;
   color: #fff;
   max-width: 70%;
   margin: 0 auto;
@@ -207,12 +207,14 @@ header ul a:hover {
   background: url("./img/background3.png") no-repeat;
   background-size: cover;
   background-attachment: fixed;
+  background-position: right;
 }
 
 .corporationsPage {
   background: url("./img/background2.png") no-repeat;
   background-size: cover;
   background-attachment: fixed;
+  background-position: left;
 }
 
 @keyframes show {
@@ -267,7 +269,7 @@ header ul a:hover {
   background-color: rgba(23, 21, 22, 1);
   color: #fff;
   font-weight: 400;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .tab:hover {
@@ -288,10 +290,14 @@ header ul a:hover {
 }
 
 .tabs__ul {
-  line-height: 45px;
   color: #565656;
-  font-size: 20px;
+  font-size: 18px;
   list-style: none;
+}
+
+.tabs__ul li {
+  margin-bottom: 25px;
+  line-height: 20px;
 }
 
 .tabs__ul li::before {
@@ -361,10 +367,28 @@ header ul a:hover {
 
 @media screen and (max-width: 1380px) {
   .tabs__header {
+    display: flex;
     flex-wrap: wrap;
+    padding: 20px 100px;
+    justify-content: flex-start;
     height: auto;
-    padding: 40px 10px;
+    gap: 35px;
   }
+
+  .tab {
+    width: calc(30% - 10px);
+    box-sizing: border-box;
+    margin: 5px; /* Отступ между элементами */
+    display: flex;
+  }
+  .tab--active {
+    border: none !important;
+  }
+  .tab.tab--active {
+    text-decoration: underline white;
+    text-underline-offset: 4px;
+  }
+
   .tabs__content {
     padding-left: 40px;
   }
@@ -380,24 +404,6 @@ header ul a:hover {
 
 @media screen and (max-width: 1250px) {
   .pc-btn {
-    font-size: 12px;
-  }
-}
-
-@media screen and (max-width: 1080px) {
-  .pc-btn {
-    font-size: 10px;
-  }
-}
-
-@media screen and (max-width: 1000px) {
-  .page {
-    margin-top: 15%;
-  }
-  .footer {
-    padding: 20px 10px;
-  }
-  .pc-btn {
     display: none;
   }
   .mobile-menu {
@@ -408,9 +414,34 @@ header ul a:hover {
   }
 }
 
+@media screen and (max-width: 1000px) {
+  .page {
+    margin-top: 15%;
+  }
+}
+
 @media screen and (max-width: 988px) {
   .leadership__history {
     flex-direction: column;
+  }
+  .leadership__year h3::after {
+    display: none;
+  }
+  .leadership__year {
+    position: relative;
+  }
+  .leadership__year::after {
+    content: "";
+    background-color: #30454f;
+    position: absolute;
+    left: 5px;
+    top: 110px;
+    width: 1px;
+    height: 100px;
+    display: block;
+  }
+  .leadership__year:last-child::after {
+    display: none;
   }
   .page h1 {
     font-size: 36px;
@@ -418,8 +449,45 @@ header ul a:hover {
   .page p {
     font-size: 16px;
   }
+  .tabs__ul {
+    font-size: 16px;
+  }
   .footer {
     height: auto;
+    padding: 20px 10px;
+  }
+  .footer__top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer__top p {
+    font-size: 20px;
+    text-align: center;
+  }
+  .footer__bottom {
+    flex-direction: column-reverse;
+    align-items: center;
+    font-size: 14px;
+  }
+  .footer__docs {
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 930px) {
+  .tabs__header {
+    padding: 20px 20px;
+  }
+}
+
+@media screen and (max-width: 815px) {
+  .tabs__header {
+    gap: 15px;
+  }
+  .tab {
+    width: calc(45% - 10px);
   }
 }
 
@@ -434,22 +502,19 @@ header ul a:hover {
   .page {
     margin-top: 30%;
   }
-
-  .footer__top {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  .page p {
+    max-width: 95%;
   }
-  .footer__top p {
-    font-size: 14px;
-    text-align: center;
+  .tabs__header {
+    gap: 10px;
+    padding: 20px 3px;
   }
-  .footer__bottom {
-    flex-direction: column-reverse;
-    align-items: center;
+  .tab {
+    width: 37%;
+    margin: 2px;
+    font-size: 13px;
   }
-  .footer__docs {
-    justify-content: center;
-    margin-bottom: 20px;
+  .tab:nth-child(2n) {
+    width: 58%;
   }
 }
