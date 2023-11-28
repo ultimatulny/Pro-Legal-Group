@@ -4,6 +4,8 @@ import {Footer} from "./Footer"
 import {Leadership} from './Leadeship'
 import {Tabs} from './Tabs'
 import {corporationTabData, privateClientsTabData } from '../data/tabsData'
+import { AboutUsMobile } from "./AboutUsMobile"
+import { OurMissionMobile } from "./OurMissionMobile"
 
 const Layout = () => {
     const locaton = useLocation();
@@ -25,6 +27,12 @@ const Layout = () => {
         backgroundImageClass += ' corporationsPage'
         triangleClass = 'hideTriangleWrapper'
         componentToRender = <Tabs data={corporationTabData}/>
+    }
+    else if(currentPath === "/") {
+        componentToRender = <>
+            <AboutUsMobile/>
+            <OurMissionMobile/>
+        </>
     }
 
 

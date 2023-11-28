@@ -246,9 +246,6 @@ header ul a:hover {
   background: #555;
 }
 
-.tabs {
-}
-
 .tabs__header {
   background-color: rgba(23, 21, 22, 1);
   height: 150px;
@@ -365,34 +362,34 @@ header ul a:hover {
   right: 40px;
 }
 
+.aboutUsMobile,
+.ourMissionMobile {
+  display: none;
+  padding: 90px 136px;
+  color: #fff;
+}
+
+.aboutUsMobile {
+  background-color: rgba(59, 55, 52, 1);
+}
+
+.ourMissionMobile {
+  background-color: rgba(35, 35, 35, 1);
+}
+
+.aboutUsMobile h2,
+.ourMissionMobile h2 {
+  font-size: 24px;
+}
+
+.aboutUsMobile p,
+.ourMissionMobile p {
+  font-size: 16px;
+  font-weight: 400;
+  margin-top: 23px;
+}
+
 @media screen and (max-width: 1380px) {
-  .tabs__header {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 20px 100px;
-    justify-content: flex-start;
-    height: auto;
-    gap: 35px;
-  }
-
-  .tab {
-    width: calc(30% - 10px);
-    box-sizing: border-box;
-    margin: 5px; /* Отступ между элементами */
-    display: flex;
-  }
-  .tab--active {
-    border: none !important;
-  }
-  .tab.tab--active {
-    text-decoration: underline white;
-    text-underline-offset: 4px;
-  }
-
-  .tabs__content {
-    padding-left: 40px;
-  }
-
   header {
     padding: 24px 50px 0 50px;
   }
@@ -412,32 +409,74 @@ header ul a:hover {
   .mobile-menu ul {
     display: none;
   }
+  .aboutUsMobile,
+  .ourMissionMobile {
+    display: block;
+  }
+  header {
+    padding: 24px 136px 0 136px;
+  }
+  .page {
+    padding: 0 136px 100px 136px;
+  }
+  .tabs__header {
+    background-color: #232323;
+    flex-direction: column;
+    align-items: start;
+    height: auto;
+    padding: 45px 0;
+    gap: 30px;
+  }
+  .tab {
+    background-color: #232323;
+    margin-left: 40%;
+    position: relative;
+  }
+  .tab--active {
+    border: none !important;
+  }
+  .tab--active::before {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 2px;
+    background-color: #fff;
+    left: -50px;
+    top: 10px;
+  }
+  .tabs__content {
+    padding: 50px 156px;
+    min-height: auto;
+  }
 }
 
 @media screen and (max-width: 1000px) {
   .page {
-    margin-top: 15%;
+    margin-top: 10%;
   }
 }
 
 @media screen and (max-width: 988px) {
   .leadership__history {
     flex-direction: column;
+    align-items: center;
+    gap: 84px;
   }
   .leadership__year h3::after {
     display: none;
   }
   .leadership__year {
     position: relative;
+    text-align: center;
   }
   .leadership__year::after {
     content: "";
     background-color: #30454f;
     position: absolute;
-    left: 5px;
+    left: 100px;
     top: 110px;
     width: 1px;
-    height: 100px;
+    height: 59px;
     display: block;
   }
   .leadership__year:last-child::after {
@@ -474,20 +513,9 @@ header ul a:hover {
     justify-content: center;
     margin-bottom: 20px;
   }
-}
-
-@media screen and (max-width: 930px) {
-  .tabs__header {
-    padding: 20px 20px;
-  }
-}
-
-@media screen and (max-width: 815px) {
-  .tabs__header {
-    gap: 15px;
-  }
-  .tab {
-    width: calc(45% - 10px);
+  .triangleWrapper {
+    background-size: 400px 400px;
+    min-height: 55vh;
   }
 }
 
@@ -498,28 +526,90 @@ header ul a:hover {
     background-size: cover;
   }
   .page {
-    margin-top: 25%;
     padding-bottom: 100px;
+    margin-top: 15%;
+  }
+  .tab {
+    margin-left: 35%;
   }
 }
 
 @media screen and (max-width: 600px) {
   .page {
-    margin-top: 30%;
+    margin-top: 20%;
   }
   .page p {
     max-width: 95%;
   }
-  .tabs__header {
-    gap: 10px;
-    padding: 20px 3px;
-  }
   .tab {
-    width: 37%;
-    margin: 2px;
-    font-size: 13px;
+    margin-left: 25%;
   }
-  .tab:nth-child(2n) {
-    width: 58%;
+}
+
+@media screen and (max-width: 592px) {
+  .aboutUsMobile h2,
+  .ourMissionMobile h2 {
+    max-width: 320px;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .aboutUsMobile p,
+  .ourMissionMobile p {
+    max-width: 320px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 23px;
+  }
+  header {
+    padding: 24px 0 0 0;
+  }
+  header ul {
+    margin: 0 auto;
+    padding: 0 10%;
+  }
+  .page {
+    padding: 0 0 100px 0;
+    max-width: 320px;
+    margin: 0 auto;
+    margin-top: 23%;
+  }
+  .tabs__content {
+    padding: 50px 0;
+  }
+  .tabs__ul {
+    max-width: 320px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .aboutUsMobile,
+  .ourMissionMobile {
+    padding: 90px 0;
+  }
+}
+
+@media screen and (max-width: 340px) {
+  header ul {
+    padding: 5%;
+  }
+  .page {
+    max-width: 270px;
+  }
+  .aboutUsMobile p,
+  .ourMissionMobile p,
+  .aboutUsMobile h2,
+  .ourMissionMobile h2 {
+    max-width: 250px;
+  }
+  .footer__bottom {
+    font-size: 11px;
+  }
+  .footer__top h3 {
+    font-size: 20px;
+  }
+  .tabs__ul {
+    max-width: 270px;
   }
 }
