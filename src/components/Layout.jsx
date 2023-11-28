@@ -47,6 +47,8 @@ const Layout = () => {
             </div>
             {componentToRender}
             <Footer/>
+            <div className="preloadImg1"></div>
+            <div className="preloadImg2"></div>
         </div>
         </>
     )

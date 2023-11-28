@@ -237,6 +237,14 @@ header ul a:hover {
   margin-top: 25px;
 }
 
+.preloadImg1 {
+  background: url("./img/background2.png") no-repeat;
+}
+
+.preloadImg2 {
+  background: url("./img/background3.png") no-repeat;
+}
+
 .privateClientsPage {
   background: url("./img/background3.png") no-repeat;
   background-size: cover;
