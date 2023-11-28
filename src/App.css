@@ -6,6 +6,16 @@
   font-weight: 400;
 }
 
+.notFoundPage {
+  color: rgb(156, 156, 156);
+  font-size: 24px;
+}
+
+.notFoundPage a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+
 .bannerBack {
   position: fixed;
   z-index: 9999;
@@ -337,10 +347,13 @@ header ul a:hover {
 .tabs__ul li {
   margin-bottom: 25px;
   line-height: 25px;
+  position: relative;
 }
 
 .tabs__ul li::before {
   content: "⬥";
+  position: absolute;
+  left: -13px;
   color: #897b6f;
   font-weight: bold;
   display: inline-block;
@@ -489,6 +502,11 @@ header ul a:hover {
   .tabs__content {
     padding: 50px 156px;
     min-height: auto;
+  }
+  .tab:hover {
+    border: none;
+    margin-top: 0px;
+    cursor: pointer;
   }
 }
 

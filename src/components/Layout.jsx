@@ -35,6 +35,10 @@ const Layout = () => {
         </>
     }
 
+    if(( currentPath === "/about" || currentPath ==='/mission') && (window.innerWidth <= 1250)) {
+        window.location.href = '/'
+    }
+
 
     return(
         <>

@@ -2,8 +2,8 @@ import {Link} from 'react-router-dom'
 
 const NotfoundPage = () => {
     return(
-        <div className="page">
-            This page doesn't exists. Go <Link to="/">home</Link>
+        <div className="page notFoundPage">
+            This page doesn't exists. <Link to="/">Go home</Link>
         </div>
     )
 }

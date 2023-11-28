@@ -51,16 +51,7 @@ const Header = () => {
                   Home
                 </Link>
               </li>
-              <li>
-                <Link to="/about" onClick={handleLinkClick}>
-                  About Us
-                </Link>
-              </li>
-              <li>
-                <Link to="/mission" onClick={handleLinkClick}>
-                  Our Mission & Vision
-                </Link>
-              </li>
+             
               <li>
                 <Link to="/leadership" onClick={handleLinkClick}>
                   Leadership
