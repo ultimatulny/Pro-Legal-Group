@@ -82,6 +82,12 @@ body,
   min-height: 70vh;
 }
 
+.leadershipGreyBackground {
+  background-color: #232323;
+  background-size: contain;
+  min-height: 70vh;
+}
+
 main {
   flex: 1;
   position: relative;
@@ -444,6 +450,22 @@ header ul a:hover {
   margin-top: 23px;
 }
 
+.photoLeadership {
+  position: relative;
+}
+
+.photoLeadership::after {
+  content: "";
+  background-image: url("./img/photo.png");
+  width: 345px;
+  height: 490px;
+  position: absolute;
+  background-size: cover;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+}
+
 @media screen and (max-width: 1380px) {
   header {
     padding: 24px 50px 0 50px;
@@ -517,6 +539,10 @@ header ul a:hover {
 }
 
 @media screen and (max-width: 988px) {
+  .photoLeadership::after {
+    width: 250px;
+    height: 350px;
+  }
   .leadership__history {
     flex-direction: column;
     align-items: center;
