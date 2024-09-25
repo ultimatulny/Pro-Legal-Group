@@ -457,7 +457,7 @@ header ul a:hover {
 .photoLeadership::after {
   content: "";
   background-image: url("./img/photo.png");
-  width: 345px;
+  width: 400px;
   height: 490px;
   position: absolute;
   background-size: cover;
@@ -540,7 +540,7 @@ header ul a:hover {
 
 @media screen and (max-width: 988px) {
   .photoLeadership::after {
-    width: 250px;
+    width: 280px;
     height: 350px;
   }
   .leadership__history {
